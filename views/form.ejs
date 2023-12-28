@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% result.forEach(function(tbl){ %>
+    
+    <form action="/up" method="post">
+        Id: <input type="text" value="<%=tbl.id%>" name="id"><br><br>
+        Name: <input type="text" value="<%=tbl.name%>" name="name"><br><br>
+        Email: <input type="email" value="<%=tbl.email%>" name="email"><br><br>
+        Numbers: <input type="text" value="<%=tbl.number%>" name="number"><br><br>
+        <input type="submit" value="update" name="submit">
+
+    </form>
+    <% }) %>
+</body>
+</html>

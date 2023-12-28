@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example</title>
+    <style>
+        th,td{
+            padding:10px;
+
+        }
+        table{
+            width: auto;
+            margin: auto;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+   <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Number</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+        <% result.forEach(function(tbl){ %>
+        <tr>
+            <td><%= tbl.id %></td>
+            <td><%= tbl.name %></td>
+            <td><%= tbl.email %></td>
+            <td><%= tbl.number %></td>
+            <td><a href="/delete/<%= tbl.id %>">Delete</a></td>
+            <td><a href="/update/<%= tbl.id %>">Updtate</a></td>
+        </tr>
+        <% }) %>
+   </table>
+</body>
+</html>
